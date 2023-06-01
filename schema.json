@@ -1,0 +1,81 @@
+{
+  "nodes": [
+    {
+      "width": 300,
+      "height": 459,
+      "id": "csvFile_0",
+      "position": {
+        "x": 382.12151898734174,
+        "y": 262.6886075949367
+      },
+      "type": "customNode",
+      "data": {
+        "label": "Csv File",
+        "name": "csvFile",
+        "type": "Document",
+        "icon": "/hms/projects/Flowise/node_modules/flowise-components/dist/nodes/documentloaders/Csv/Csv.png",
+        "category": "Document Loaders",
+        "description": "Load data from CSV files",
+        "baseClasses": [
+          "Document"
+        ],
+        "inputs": {
+          "csvFile": "",
+          "textSplitter": "",
+          "columnName": ""
+        },
+        "filePath": "/hms/projects/Flowise/node_modules/flowise-components/dist/nodes/documentloaders/Csv/Csv.js",
+        "inputAnchors": [
+          {
+            "label": "Text Splitter",
+            "name": "textSplitter",
+            "type": "TextSplitter",
+            "optional": true,
+            "id": "csvFile_0-input-textSplitter-TextSplitter"
+          }
+        ],
+        "inputParams": [
+          {
+            "label": "Csv File",
+            "name": "csvFile",
+            "type": "file",
+            "fileType": ".csv",
+            "id": "csvFile_0-input-csvFile-file"
+          },
+          {
+            "label": "Single Column Extraction",
+            "name": "columnName",
+            "type": "string",
+            "description": "Extracting a single column",
+            "placeholder": "Enter column name",
+            "optional": true,
+            "id": "csvFile_0-input-columnName-string"
+          }
+        ],
+        "outputs": {},
+        "outputAnchors": [
+          {
+            "id": "csvFile_0-output-csvFile-Document",
+            "name": "csvFile",
+            "label": "Document",
+            "type": "Document"
+          }
+        ],
+        "id": "csvFile_0",
+        "selected": false
+      },
+      "selected": true,
+      "positionAbsolute": {
+        "x": 382.12151898734174,
+        "y": 262.6886075949367
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [],
+  "viewport": {
+    "x": 53.9488982653541,
+    "y": -194.20299169405644,
+    "zoom": 0.8100613982966923
+  }
+}

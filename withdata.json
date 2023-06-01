@@ -1,0 +1,81 @@
+{
+  "nodes": [
+    {
+      "width": 300,
+      "height": 459,
+      "id": "csvFile_0",
+      "position": {
+        "x": 382.12151898734174,
+        "y": 262.6886075949367
+      },
+      "type": "customNode",
+      "data": {
+        "label": "Csv File",
+        "name": "csvFile",
+        "type": "Document",
+        "icon": "/hms/projects/Flowise/node_modules/flowise-components/dist/nodes/documentloaders/Csv/Csv.png",
+        "category": "Document Loaders",
+        "description": "Load data from CSV files",
+        "baseClasses": [
+          "Document"
+        ],
+        "inputs": {
+          "csvFile": "data:text/csv;base64,VGFzayBOYW1lLFdlZWsgKG51bWJlcikKRGltZW5zaW9uYWwgTW9kZWxsaW5nLDEKRGltZW5zaW9uYWwgTW9kZWwgUmV2aWV3LApTdGFyIFNjaGVtYSBEZXNpZ24sMgpDcmVhdGUgUGh5c2ljYWwgdGFibGVzLApDaGVjayBpbnRlZ3JhdGluZyBNYXJpYURCIHRhYmxlcyB3aXRoIFB5dGhvbiBPTEFQLApFVEwgZGVzaWduLDIKQVBJIGdlbmVyYXRpb24gKFB5dGhvbiBPTEFQIG9yIG90aGVyIGZyYW1lIHdvcmspLDIKRGFzaGJvYXJkIFJlcXVpcmVtZW50IFN1bW1hcnksMQpEYXNoYm9hcmQgV2lyZWZyYW1lcywzCkRhc2hib2FyZCBEZXZlbG9wbWVudCwzClVuaXQgdGVzdHMgYW5kIGludGVncmF0aW9uIHRlc3QsNApEZXBsb3ltZW50IGFuZCBmaW5hbCB0ZXN0aW5nLDQKTW9uaXRvcmluZyBTeXN0ZW0sNQo=,filename:user_event_analytics_task_list.csv",
+          "textSplitter": "",
+          "columnName": "Task Name"
+        },
+        "filePath": "/hms/projects/Flowise/node_modules/flowise-components/dist/nodes/documentloaders/Csv/Csv.js",
+        "inputAnchors": [
+          {
+            "label": "Text Splitter",
+            "name": "textSplitter",
+            "type": "TextSplitter",
+            "optional": true,
+            "id": "csvFile_0-input-textSplitter-TextSplitter"
+          }
+        ],
+        "inputParams": [
+          {
+            "label": "Csv File",
+            "name": "csvFile",
+            "type": "file",
+            "fileType": ".csv",
+            "id": "csvFile_0-input-csvFile-file"
+          },
+          {
+            "label": "Single Column Extraction",
+            "name": "columnName",
+            "type": "string",
+            "description": "Extracting a single column",
+            "placeholder": "Enter column name",
+            "optional": true,
+            "id": "csvFile_0-input-columnName-string"
+          }
+        ],
+        "outputs": {},
+        "outputAnchors": [
+          {
+            "id": "csvFile_0-output-csvFile-Document",
+            "name": "csvFile",
+            "label": "Document",
+            "type": "Document"
+          }
+        ],
+        "id": "csvFile_0",
+        "selected": true
+      },
+      "selected": true,
+      "positionAbsolute": {
+        "x": 382.12151898734174,
+        "y": 262.6886075949367
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [],
+  "viewport": {
+    "x": -120.0613220815751,
+    "y": -284.3435900328677,
+    "zoom": 0.9720736779560307
+  }
+}
