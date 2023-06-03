@@ -24,7 +24,7 @@ const CustomWidthTooltip = styled(({ className, ...props }) => <Tooltip {...prop
 
 // ===========================|| NodeInputHandler ||=========================== //
 
-const NodeInputHandler = ({ inputAnchor, inputParam, data, disabled = false, isAdditionalParams = false }) => {
+const NodeInputHandler = ({ menuItem, inputAnchor, inputParam, data, disabled = false, isAdditionalParams = false }) => {
     const theme = useTheme()
     const ref = useRef(null)
     const { reactFlowInstance } = useContext(flowContext)
@@ -178,6 +178,87 @@ const NodeInputHandler = ({ inputAnchor, inputParam, data, disabled = false, isA
                     </Box>
                 </>
             )}
+
+            {menuItem &&
+                // <label>{menuItem.label}</label>
+                <>
+                    <CustomWidthTooltip placement='left' title={menuItem.type}>
+                        <Handle
+                            type='source'
+                            position={Position.Right}
+                            key={menuItem.id}
+                            id={menuItem.id}
+                            // isValidConnection={(connection) => isValidConnection(connection, reactFlowInstance)}
+                            style={{
+                                height: 10,
+                                width: 10,
+                                backgroundColor: data.selected ? theme.palette.primary.main : theme.palette.text.secondary,
+                                top: position
+                            }}
+                        />
+                    </CustomWidthTooltip>
+                    <Box sx={{ p: 2 }}>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
+                            <Typography>
+                                {menuItem.label}
+                                {!menuItem.optional && <span style={{ color: 'red' }}>&nbsp;*</span>}
+                            </Typography>
+                            <div style={{ flexGrow: 1 }}></div>
+                            {menuItem.type === 'string' && menuItem.rows && (
+                                <IconButton
+                                    size='small'
+                                    sx={{
+                                        height: 25,
+                                        width: 25
+                                    }}
+                                    title='Expand'
+                                    color='primary'
+                                    onClick={() =>
+                                        onExpandDialogClicked(data.inputs[menuItem.name] ?? menuItem.default ?? '', menuItem)
+                                    }
+                                >
+                                    <IconArrowsMaximize />
+                                </IconButton>
+                            )}
+                        </div>
+                        {/*{inputParam.type === 'file' && (*/}
+                        {/*    <File*/}
+                        {/*        disabled={disabled}*/}
+                        {/*        fileType={inputParam.fileType || '*'}*/}
+                        {/*        onChange={(newValue) => (data.inputs[inputParam.name] = newValue)}*/}
+                        {/*        value={data.inputs[inputParam.name] ?? inputParam.default ?? 'Choose a file to upload'}*/}
+                        {/*    />*/}
+                        {/*)}*/}
+                        {/*{inputParam.type === 'boolean' && (*/}
+                        {/*    <SwitchInput*/}
+                        {/*        disabled={disabled}*/}
+                        {/*        onChange={(newValue) => (data.inputs[inputParam.name] = newValue)}*/}
+                        {/*        value={data.inputs[inputParam.name] ?? inputParam.default ?? false}*/}
+                        {/*    />*/}
+                        {/*)}*/}
+                        <Input
+                            disabled={disabled}
+                            inputParam={menuItem}
+                            onChange={(newValue) => (data.inputs[menuItem.name] = newValue)}
+                            value={data.inputs[menuItem.name] ?? menuItem.default ?? ''}
+                            showDialog={showExpandDialog}
+                            dialogProps={expandDialogProps}
+                            onDialogCancel={() => setShowExpandDialog(false)}
+                            onDialogConfirm={(newValue, inputParamName) => onExpandDialogSave(newValue, inputParamName)}
+                        />
+                        {/*{inputParam.type === 'options' && (*/}
+                        {/*    <Dropdown*/}
+                        {/*        disabled={disabled}*/}
+                        {/*        name={inputParam.name}*/}
+                        {/*        options={inputParam.options}*/}
+                        {/*        onSelect={(newValue) => (data.inputs[inputParam.name] = newValue)}*/}
+                        {/*        value={data.inputs[inputParam.name] ?? inputParam.default ?? 'chose an option'}*/}
+                        {/*    />*/}
+                        {/*)}*/}
+                    </Box>
+                </>
+
+            }
         </div>
     )
 }

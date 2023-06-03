@@ -2,42 +2,114 @@
   "nodes": [
     {
       "width": 200,
-      "height": 116,
-      "id": "4",
+      "height": 157,
+      "id": "node_1",
       "data": {
-        "label": "Node 4"
+        "label": "Node 5",
+        "title": "",
+        "fileName": "",
+        "inputParams": [
+          {
+            "label": "Csv File",
+            "name": "csvFile",
+            "type": "file",
+            "fileType": ".csv",
+            "id": "node_1-welcome_node"
+          },
+          {
+            "label": "File Size",
+            "name": "fileSize",
+            "type": "input",
+            "id": "node_15-welcome_node"
+          }
+        ],
+        "inputs": {
+          "csvFile": "Test",
+          "fileSize": "1500"
+        }
       },
       "position": {
-        "x": 400,
-        "y": 200
+        "x": 434.8382565620308,
+        "y": 159.06504853961374
       },
-      "type": "custom",
+      "type": "customOld",
       "className": "Flow_customNode__LJxOT",
+      "selected": false,
       "positionAbsolute": {
-        "x": 400,
-        "y": 200
-      }
+        "x": 434.8382565620308,
+        "y": 159.06504853961374
+      },
+      "dragging": false
+    },
+    {
+      "width": 200,
+      "height": 157,
+      "id": "node_6",
+      "data": {
+        "label": "Node 6",
+        "title": "",
+        "fileName": "",
+        "inputParams": [
+          {
+            "label": "Csv File",
+            "name": "csvFile",
+            "type": "file",
+            "fileType": ".csv",
+            "id": "node_6-welcome_node"
+          },
+          {
+            "label": "File Size",
+            "name": "fileSize",
+            "type": "input",
+            "id": "node_6-welcome_node"
+          }
+        ],
+        "inputs": {
+          "csvFile": "contacts.csv",
+          "fileSize": "745",
+          "textSplitter": "{{node_1.data.instance}}"
+        },
+        "inputAnchors": [
+          {
+            "label": "Text Splitter",
+            "name": "textSplitter",
+            "type": "TextSplitter",
+            "optional": true,
+            "id": "node_6-input-textSplitter-TextSplitter"
+          }
+        ]
+      },
+      "position": {
+        "x": -0.8857846275474515,
+        "y": 121.04811333956027
+      },
+      "type": "customOld",
+      "className": "Flow_customNode__LJxOT",
+      "selected": true,
+      "positionAbsolute": {
+        "x": -0.8857846275474515,
+        "y": 121.04811333956027
+      },
+      "dragging": false
     }
   ],
   "edges": [
     {
       "animated": true,
-      "type": "smoothstep",
-      "id": "e1-2",
-      "source": "1",
-      "target": "2"
-    },
-    {
-      "animated": true,
-      "type": "smoothstep",
-      "id": "e1-3",
-      "source": "1",
-      "target": "3"
+      "type": "buttonedge",
+      "source": "node_1",
+      "sourceHandle": "node_1-source-textSplitter-TextSplitter",
+      "target": "node_6",
+      "targetHandle": "node_6-target-textSplitter-TextSplitter",
+      "id": "node_1-node_1-source-textSplitter-TextSplitter-node_6-node_6-target-textSplitter-TextSplitter",
+      "data": {
+        "label": ""
+      }
     }
   ],
   "viewport": {
-    "x": -83.5,
-    "y": -254.5,
-    "zoom": 2
+    "x": 403.94577384359434,
+    "y": -83.9946337746803,
+    "zoom": 1.3777956975124246
   }
 }
