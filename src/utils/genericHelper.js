@@ -1,17 +1,20 @@
 import moment from 'moment'
 
 export const getUniqueNodeId = (nodeData, nodes) => {
+    console.log('nodeData', nodeData)
     // Get amount of same nodes
     let totalSameNodes = 0
     for (let i = 0; i < nodes.length; i += 1) {
         const node = nodes[i]
         if (node.data.name === nodeData.name) {
+            console.log('node.data.name', node.data.name, 'nodeData.name', nodeData.name)
             totalSameNodes += 1
         }
     }
 
     // Get unique id
     let nodeId = `${nodeData.name}_${totalSameNodes}`
+    console.log('nodeId', nodeId)
     for (let i = 0; i < nodes.length; i += 1) {
         const node = nodes[i]
         if (node.id === nodeId) {

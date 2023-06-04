@@ -10,8 +10,8 @@ export function createNewMenu(id: string){
         "type": "MenuNode",
         "data": {
             "id": `menu_${id}`,
+            "name": "menu",
             "label": "Untitled Menu",
-            // "name": "welcomeMenu",
             "type": "Menu",
             "category": "Menu",
             "description": "Untitled Menu",
@@ -100,21 +100,81 @@ export function createNewMenu(id: string){
     }
 }
 
+export function createNewConfigParamSetter(id: string){
+    return {
+        "id": `menu_${id}`,
+        "position": {
+            "x": 100.774716455307,
+            "y": 400.15148173674334
+        },
+        "type": "MenuNode",
+        "data": {
+            "id": `menu_${id}`,
+            "name": "config",
+            "label": "Configure Settings",
+            "type": "ConfigParamSetter",
+            "category": "Configs",
+            "description": "Configure Settings",
+            "inputs": {
+            },
+            "inputAnchors": [
+                {
+                    "label": "Menu Trigger",
+                    "name": "menuTrigger",
+                    "type": "MenuTrigger",
+                    "optional": true,
+                    "id": `menu_${id}-anchor-menuTrigger`
+                }
+            ],
+            "inputParams": [
+                {
+                    "label": "Config Code",
+                    "name": "configCode",
+                    "type": "string",
+                    "placeholder": "Config Code",
+                    "id": `menu_${id}-config-configCode-string`
+                },
+                {
+                    "label": "Config Value",
+                    "name": "configValue",
+                    "type": "string",
+                    "placeholder": "Config Value",
+                    "id": `menu_${id}-config-configValue-string`
+                }
+            ],
+            "menuItems": [
+
+            ],
+            "outputs": {},
+            "outputAnchors": [
+                {
+                    "label": "Menu Trigger",
+                    "name": "menuTrigger",
+                    "type": "MenuTrigger",
+                    "optional": true,
+                    "id": `menu_${id}-anchor-menuTrigger`
+                }
+            ],
+            "selected": true
+        }
+    }
+}
+
 export function createInitialNodes() {
-    return [
+    return   [
         {
             "width": 300,
             "height": 1162,
             "id": "menu_0",
             "position": {
-                "x": -812.1697279891374,
-                "y": 113.04037062563225
+                "x": -124.48794832812021,
+                "y": 53.00465970284506
             },
             "type": "MenuNode",
             "data": {
                 "id": "menu_0",
                 "label": "Menu",
-                "name": "Menu",
+                "name": "menu",
                 "type": "Menu",
                 "category": "Menu",
                 "description": "Welcome menu for the bot.",
@@ -126,7 +186,8 @@ export function createInitialNodes() {
                     "menuHeader": "Welcome to ABC Bank",
                     "item0": "Account Information",
                     "item1": "Loans Information",
-                    "item2": "Credit Card Information"
+                    "item2": "Credit Card Information",
+                    "menuTrigger": "{{menu_49d475ee.data.instance}}"
                 },
                 "inputAnchors": [
                     {
@@ -206,8 +267,8 @@ export function createInitialNodes() {
             },
             "selected": false,
             "positionAbsolute": {
-                "x": -812.1697279891374,
-                "y": 113.04037062563225
+                "x": -124.48794832812021,
+                "y": 53.00465970284506
             },
             "dragging": false
         },
@@ -216,13 +277,14 @@ export function createInitialNodes() {
             "height": 1162,
             "id": "menu_80aca9e9-9261-45d5-8932-637607718705",
             "position": {
-                "x": 263.38582756641813,
-                "y": 114.76259284785442
+                "x": 554.4680623435682,
+                "y": 69.28099366392473
             },
             "type": "MenuNode",
             "data": {
                 "id": "menu_80aca9e9-9261-45d5-8932-637607718705",
                 "label": "Untitled Menu",
+                "name": "menu",
                 "type": "Menu",
                 "category": "Menu",
                 "description": "Untitled Menu",
@@ -314,8 +376,8 @@ export function createInitialNodes() {
             },
             "selected": false,
             "positionAbsolute": {
-                "x": 263.38582756641813,
-                "y": 114.76259284785442
+                "x": 554.4680623435682,
+                "y": 69.28099366392473
             },
             "dragging": false
         },
@@ -324,8 +386,8 @@ export function createInitialNodes() {
             "height": 1162,
             "id": "menu_aad53552-818e-4721-9092-95be7803082d",
             "position": {
-                "x": 925.663605344196,
-                "y": 121.9848150700767
+                "x": 1107.5900020799147,
+                "y": 74.68395191878983
             },
             "type": "MenuNode",
             "data": {
@@ -333,6 +395,7 @@ export function createInitialNodes() {
                 "label": "Untitled Menu",
                 "type": "Menu",
                 "category": "Menu",
+                "name": "menu",
                 "description": "Untitled Menu",
                 "inputs": {
                     "systemMessagePrompt": "",
@@ -420,10 +483,316 @@ export function createInitialNodes() {
                 "outputAnchors": [],
                 "selected": true
             },
-            "selected": true,
+            "selected": false,
             "positionAbsolute": {
-                "x": 925.663605344196,
-                "y": 121.9848150700767
+                "x": 1107.5900020799147,
+                "y": 74.68395191878983
+            },
+            "dragging": false
+        },
+        {
+            "width": 300,
+            "height": 1162,
+            "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab",
+            "position": {
+                "x": -1190.9027003682968,
+                "y": 83.59955141659259
+            },
+            "type": "MenuNode",
+            "data": {
+                "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab",
+                "label": "Untitled Menu",
+                "type": "Menu",
+                "category": "Menu",
+                "name": "menu",
+                "description": "Untitled Menu",
+                "inputs": {
+                    "systemMessagePrompt": "",
+                    "humanMessagePrompt": "",
+                    "promptValues": "",
+                    "menuName": "Language Selector",
+                    "menuHeader": "Welcome to ABC Bank.\nSelect your language",
+                    "item0": "Sinhala",
+                    "item1": "English",
+                    "item2": "Tamil"
+                },
+                "inputAnchors": [
+                    {
+                        "label": "Menu Trigger",
+                        "name": "menuTrigger",
+                        "type": "MenuTrigger",
+                        "optional": true,
+                        "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-anchor-menuTrigger"
+                    }
+                ],
+                "inputParams": [
+                    {
+                        "label": "Menu Name",
+                        "name": "menuName",
+                        "type": "string",
+                        "placeholder": "Name of the Menu",
+                        "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-menuName-string"
+                    },
+                    {
+                        "label": "Menu Header",
+                        "name": "menuHeader",
+                        "type": "string",
+                        "placeholder": "Menu Header",
+                        "rows": 3,
+                        "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-menuHeader-string"
+                    },
+                    {
+                        "label": "Menu Footer",
+                        "name": "menuFooter",
+                        "type": "string",
+                        "placeholder": "Menu Footer",
+                        "optional": true,
+                        "rows": 3,
+                        "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-menuFooter-string"
+                    }
+                ],
+                "menuItems": [
+                    {
+                        "label": "Menu Item 0",
+                        "name": "item0",
+                        "type": "string",
+                        "placeholder": "Menu Item 0",
+                        "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-item_0-string"
+                    },
+                    {
+                        "label": "Menu Item 1",
+                        "name": "item1",
+                        "type": "string",
+                        "placeholder": "Menu Item 1",
+                        "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-item_1-string"
+                    },
+                    {
+                        "label": "Menu Item 2",
+                        "name": "item2",
+                        "type": "string",
+                        "placeholder": "Menu Item 2",
+                        "id": "menu_${id}-input-item_2-string"
+                    },
+                    {
+                        "label": "Menu Item 3",
+                        "name": "item3",
+                        "type": "string",
+                        "placeholder": "Menu Item 3",
+                        "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-item_3-string"
+                    },
+                    {
+                        "label": "Menu Item 4",
+                        "name": "item4",
+                        "type": "string",
+                        "placeholder": "Menu Item 4",
+                        "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-item_4-string"
+                    }
+                ],
+                "outputs": {},
+                "outputAnchors": [],
+                "selected": true
+            },
+            "selected": false,
+            "positionAbsolute": {
+                "x": -1190.9027003682968,
+                "y": 83.59955141659259
+            },
+            "dragging": false
+        },
+        {
+            "width": 300,
+            "height": 464,
+            "id": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f",
+            "position": {
+                "x": -695.316149834712,
+                "y": 191.24998299223608
+            },
+            "type": "MenuNode",
+            "data": {
+                "id": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f",
+                "label": "Configure Settings",
+                "type": "ConfigParamSetter",
+                "category": "Configs",
+                "name": "config",
+                "description": "Configure Settings",
+                "inputs": {
+                    "configCode": "USR_LANG",
+                    "configValue": "SIN"
+                },
+                "inputAnchors": [
+                    {
+                        "label": "Menu Trigger",
+                        "name": "menuTrigger",
+                        "type": "MenuTrigger",
+                        "optional": true,
+                        "id": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-anchor-menuTrigger"
+                    }
+                ],
+                "inputParams": [
+                    {
+                        "label": "Config Code",
+                        "name": "configCode",
+                        "type": "string",
+                        "placeholder": "Config Code",
+                        "id": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-config-configCode-string"
+                    },
+                    {
+                        "label": "Config Value",
+                        "name": "configValue",
+                        "type": "string",
+                        "placeholder": "Config Value",
+                        "id": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-config-configValue-string"
+                    }
+                ],
+                "menuItems": [],
+                "outputs": {},
+                "outputAnchors": [
+                    {
+                        "label": "Menu Trigger",
+                        "name": "menuTrigger",
+                        "type": "MenuTrigger",
+                        "optional": true,
+                        "id": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-anchor-menuTrigger"
+                    }
+                ],
+                "selected": true
+            },
+            "selected": false,
+            "positionAbsolute": {
+                "x": -695.316149834712,
+                "y": 191.24998299223608
+            },
+            "dragging": false
+        },
+        {
+            "width": 300,
+            "height": 464,
+            "id": "config_1",
+            "position": {
+                "x": -703.316149834712,
+                "y": 763.249982992236
+            },
+            "type": "MenuNode",
+            "data": {
+                "id": "config_1",
+                "label": "Configure Settings",
+                "type": "ConfigParamSetter",
+                "category": "Configs",
+                "name": "config",
+                "description": "Configure Settings",
+                "inputs": {
+                    "configCode": "USR_LANG",
+                    "configValue": "ENG",
+                    "menuTrigger": "{{menu_50d13e28.data.instance}}"
+                },
+                "inputAnchors": [
+                    {
+                        "label": "Menu Trigger",
+                        "name": "menuTrigger",
+                        "type": "MenuTrigger",
+                        "optional": true,
+                        "id": "config_1-anchor-menuTrigger"
+                    }
+                ],
+                "inputParams": [
+                    {
+                        "label": "Config Code",
+                        "name": "configCode",
+                        "type": "string",
+                        "placeholder": "Config Code",
+                        "id": "config_1-config-configCode-string"
+                    },
+                    {
+                        "label": "Config Value",
+                        "name": "configValue",
+                        "type": "string",
+                        "placeholder": "Config Value",
+                        "id": "config_1-config-configValue-string"
+                    }
+                ],
+                "menuItems": [],
+                "outputs": {},
+                "outputAnchors": [
+                    {
+                        "label": "Menu Trigger",
+                        "name": "menuTrigger",
+                        "type": "MenuTrigger",
+                        "optional": true,
+                        "id": "config_1-anchor-menuTrigger"
+                    }
+                ],
+                "selected": true
+            },
+            "selected": false,
+            "positionAbsolute": {
+                "x": -703.316149834712,
+                "y": 763.249982992236
+            },
+            "dragging": false
+        },
+        {
+            "width": 300,
+            "height": 464,
+            "id": "config_2",
+            "position": {
+                "x": -693.316149834712,
+                "y": 1281.249982992236
+            },
+            "type": "MenuNode",
+            "data": {
+                "id": "config_2",
+                "label": "Configure Settings",
+                "type": "ConfigParamSetter",
+                "category": "Configs",
+                "name": "config",
+                "description": "Configure Settings",
+                "inputs": {
+                    "configCode": "USR_LANG",
+                    "configValue": "TAL",
+                    "menuTrigger": "{{menu_${id}.data.instance}}"
+                },
+                "inputAnchors": [
+                    {
+                        "label": "Menu Trigger",
+                        "name": "menuTrigger",
+                        "type": "MenuTrigger",
+                        "optional": true,
+                        "id": "config_2-anchor-menuTrigger"
+                    }
+                ],
+                "inputParams": [
+                    {
+                        "label": "Config Code",
+                        "name": "configCode",
+                        "type": "string",
+                        "placeholder": "Config Code",
+                        "id": "config_2-config-configCode-string"
+                    },
+                    {
+                        "label": "Config Value",
+                        "name": "configValue",
+                        "type": "string",
+                        "placeholder": "Config Value",
+                        "id": "config_2-config-configValue-string"
+                    }
+                ],
+                "menuItems": [],
+                "outputs": {},
+                "outputAnchors": [
+                    {
+                        "label": "Menu Trigger",
+                        "name": "menuTrigger",
+                        "type": "MenuTrigger",
+                        "optional": true,
+                        "id": "config_2-anchor-menuTrigger"
+                    }
+                ],
+                "selected": true
+            },
+            "selected": false,
+            "positionAbsolute": {
+                "x": -693.316149834712,
+                "y": 1281.249982992236
             },
             "dragging": false
         }
@@ -431,7 +800,7 @@ export function createInitialNodes() {
 }
 
 export function createInitialEdges(){
-    return [
+    return  [
         {
             "animated": true,
             "type": "buttonedge",
@@ -454,6 +823,78 @@ export function createInitialEdges(){
             "id": "menu_0-menu_0-input-item_1-string-menu_aad53552-818e-4721-9092-95be7803082d-menu_aad53552-818e-4721-9092-95be7803082d-anchor-menuTrigger",
             "data": {
                 "label": ""
+            }
+        },
+        {
+            "animated": true,
+            "type": "buttonedge",
+            "source": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab",
+            "sourceHandle": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-item_0-string",
+            "target": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f",
+            "targetHandle": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-anchor-menuTrigger",
+            "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-item_0-string-menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-anchor-menuTrigger",
+            "data": {
+                "label": ""
+            }
+        },
+        {
+            "animated": true,
+            "type": "buttonedge",
+            "source": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f",
+            "sourceHandle": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-anchor-menuTrigger",
+            "target": "menu_0",
+            "targetHandle": "menu_0-anchor-menuTrigger",
+            "id": "menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-menu_49d475ee-b6e7-4cc4-b594-1d0951d3034f-anchor-menuTrigger-menu_0-menu_0-anchor-menuTrigger",
+            "data": {
+                "label": "yyy"
+            }
+        },
+        {
+            "animated": true,
+            "type": "buttonedge",
+            "source": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab",
+            "sourceHandle": "menu_${id}-input-item_2-string",
+            "target": "config_2",
+            "targetHandle": "config_2-anchor-menuTrigger",
+            "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-menu_${id}-input-item_2-string-config_2-config_2-anchor-menuTrigger",
+            "data": {
+                "label": ""
+            }
+        },
+        {
+            "animated": true,
+            "type": "buttonedge",
+            "source": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab",
+            "sourceHandle": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-item_1-string",
+            "target": "config_1",
+            "targetHandle": "config_1-anchor-menuTrigger",
+            "id": "menu_50d13e28-0568-4fed-a084-92d9d1b79eab-menu_50d13e28-0568-4fed-a084-92d9d1b79eab-input-item_1-string-config_1-config_1-anchor-menuTrigger",
+            "data": {
+                "label": "sss"
+            }
+        },
+        {
+            "animated": true,
+            "type": "buttonedge",
+            "source": "config_1",
+            "sourceHandle": "config_1-anchor-menuTrigger",
+            "target": "menu_0",
+            "targetHandle": "menu_0-anchor-menuTrigger",
+            "id": "config_1-config_1-anchor-menuTrigger-menu_0-menu_0-anchor-menuTrigger",
+            "data": {
+                "label": "yyy"
+            }
+        },
+        {
+            "animated": true,
+            "type": "buttonedge",
+            "source": "config_2",
+            "sourceHandle": "config_2-anchor-menuTrigger",
+            "target": "menu_0",
+            "targetHandle": "menu_0-anchor-menuTrigger",
+            "id": "config_2-config_2-anchor-menuTrigger-menu_0-menu_0-anchor-menuTrigger",
+            "data": {
+                "label": "yyy"
             }
         }
     ]

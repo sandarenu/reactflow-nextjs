@@ -14,7 +14,7 @@ import CustomNode from './CustomNode';
 import styles from './Flow.module.css';
 import {flowContext} from '../../store/context/ReactFlowContext'
 import {getEdgeLabelName, rearrangeToolsOrdering} from "../../utils/genericHelper";
-import {createInitialEdges, createInitialNodes, createNewMenu} from "./menuUtils";
+import {createInitialEdges, createInitialNodes, createNewConfigParamSetter, createNewMenu} from "./menuUtils";
 import {v4 as uuidv4} from 'uuid';
 import ButtonEdge from "./ButtonEdge";
 
@@ -44,10 +44,7 @@ let chatflow = {
 function Flow() {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-    // const onConnect = useCallback(
-    //   (params: Connection | Edge) => setEdges((eds) => addEdge(params, eds)),
-    //   [setEdges]
-    // );
+    const {reactFlowInstance, setReactFlowInstance} = useContext(flowContext)
 
     const onConnect = (params) => {
         const newEdge = {
@@ -103,7 +100,7 @@ function Flow() {
         setEdges((eds) => addEdge(newEdge, eds))
     }
 
-    const {reactFlowInstance, setReactFlowInstance} = useContext(flowContext)
+
 
     const handleSaveFlow = (chatflowName) => {
         console.log('handleSaveFlow', chatflowName)
@@ -149,6 +146,11 @@ function Flow() {
         setNodes((nds) => [...nds, newMenu])
     }
 
+    const addNewConfigSetter = () => {
+        const newMenu = createNewConfigParamSetter(uuidv4())
+        setNodes((nds) => [...nds, newMenu])
+    }
+
     return (
         <div className={styles.flow}>
             <div>
@@ -156,6 +158,9 @@ function Flow() {
             </div>
             <div>
                 <button onClick={() => addNewMenu()}>New Menu</button>
+            </div>
+            <div>
+                <button onClick={() => addNewConfigSetter()}>New Config</button>
             </div>
             <ReactFlow
                 nodes={nodes}
