@@ -1,94 +1,327 @@
 {
   "nodes": [
     {
-      "width": 200,
-      "height": 157,
-      "id": "node_1",
-      "data": {
-        "label": "Node 5",
-        "title": "",
-        "fileName": "",
-        "inputParams": [
-          {
-            "label": "Csv File",
-            "name": "csvFile",
-            "type": "file",
-            "fileType": ".csv",
-            "id": "node_1-welcome_node"
-          },
-          {
-            "label": "File Size",
-            "name": "fileSize",
-            "type": "input",
-            "id": "node_15-welcome_node"
-          }
-        ],
-        "inputs": {
-          "csvFile": "Test",
-          "fileSize": "1500"
-        }
-      },
+      "width": 300,
+      "height": 1162,
+      "id": "menu_0",
       "position": {
-        "x": 434.8382565620308,
-        "y": 159.06504853961374
+        "x": -812.1697279891374,
+        "y": 113.04037062563225
       },
       "type": "customOld",
-      "className": "Flow_customNode__LJxOT",
+      "data": {
+        "id": "menu_0",
+        "label": "Menu",
+        "name": "Menu",
+        "type": "Menu",
+        "category": "Menu",
+        "description": "Welcome menu for the bot.",
+        "inputs": {
+          "systemMessagePrompt": "",
+          "humanMessagePrompt": "",
+          "promptValues": "",
+          "menuName": "Welcome Menu",
+          "menuHeader": "Welcome to ABC Bank",
+          "item0": "Account Information",
+          "item1": "Loans Information",
+          "item2": "Credit Card Information"
+        },
+        "inputAnchors": [
+          {
+            "label": "Menu Trigger",
+            "name": "menuTrigger",
+            "type": "MenuTrigger",
+            "optional": true,
+            "id": "menu_0-anchor-menuTrigger"
+          }
+        ],
+        "inputParams": [
+          {
+            "label": "Menu Name",
+            "name": "menuName",
+            "type": "string",
+            "placeholder": "Name of the Menu",
+            "id": "menu_0-input-menuName-string"
+          },
+          {
+            "label": "Menu Header",
+            "name": "menuHeader",
+            "type": "string",
+            "placeholder": "Menu Header",
+            "rows": 3,
+            "id": "menu_0-input-menuHeader-string"
+          },
+          {
+            "label": "Menu Footer",
+            "name": "menuFooter",
+            "type": "string",
+            "placeholder": "Menu Footer",
+            "optional": true,
+            "rows": 3,
+            "id": "menu_0-input-menuFooter-string"
+          }
+        ],
+        "menuItems": [
+          {
+            "label": "Menu Item 0",
+            "name": "item0",
+            "type": "string",
+            "placeholder": "Menu Item 0",
+            "id": "menu_0-input-item_0-string"
+          },
+          {
+            "label": "Menu Item 1",
+            "name": "item1",
+            "type": "string",
+            "placeholder": "Menu Item 1",
+            "id": "menu_0-input-item_1-string"
+          },
+          {
+            "label": "Menu Item 2",
+            "name": "item2",
+            "type": "string",
+            "placeholder": "Menu Item 2",
+            "id": "menu_0-input-item_2-string"
+          },
+          {
+            "label": "Menu Item 3",
+            "name": "item3",
+            "type": "string",
+            "placeholder": "Menu Item 3",
+            "id": "menu_0-input-item_3-string"
+          },
+          {
+            "label": "Menu Item 4",
+            "name": "item4",
+            "type": "string",
+            "placeholder": "Menu Item 4",
+            "id": "menu_0-input-item_4-string"
+          }
+        ],
+        "outputs": {},
+        "outputAnchors": [],
+        "selected": true
+      },
       "selected": false,
       "positionAbsolute": {
-        "x": 434.8382565620308,
-        "y": 159.06504853961374
+        "x": -812.1697279891374,
+        "y": 113.04037062563225
       },
       "dragging": false
     },
     {
-      "width": 200,
-      "height": 157,
-      "id": "node_6",
+      "width": 300,
+      "height": 1162,
+      "id": "menu_80aca9e9-9261-45d5-8932-637607718705",
+      "position": {
+        "x": 263.38582756641813,
+        "y": 114.76259284785442
+      },
+      "type": "customOld",
       "data": {
-        "label": "Node 6",
-        "title": "",
-        "fileName": "",
-        "inputParams": [
-          {
-            "label": "Csv File",
-            "name": "csvFile",
-            "type": "file",
-            "fileType": ".csv",
-            "id": "node_6-welcome_node"
-          },
-          {
-            "label": "File Size",
-            "name": "fileSize",
-            "type": "input",
-            "id": "node_6-welcome_node"
-          }
-        ],
+        "id": "menu_80aca9e9-9261-45d5-8932-637607718705",
+        "label": "Untitled Menu",
+        "type": "Menu",
+        "category": "Menu",
+        "description": "Untitled Menu",
         "inputs": {
-          "csvFile": "contacts.csv",
-          "fileSize": "745",
-          "textSplitter": "{{node_1.data.instance}}"
+          "systemMessagePrompt": "",
+          "humanMessagePrompt": "",
+          "promptValues": "",
+          "menuName": "Account Information Menu",
+          "menuHeader": "We provide multiple times of accounts. \nSelect the account type you want from the list below",
+          "item0": "Savings Accounts",
+          "item1": "Current Accounts",
+          "item2": "Minor Accounts"
         },
         "inputAnchors": [
           {
-            "label": "Text Splitter",
-            "name": "textSplitter",
-            "type": "TextSplitter",
+            "label": "Menu Trigger",
+            "name": "menuTrigger",
+            "type": "MenuTrigger",
             "optional": true,
-            "id": "node_6-input-textSplitter-TextSplitter"
+            "id": "menu_80aca9e9-9261-45d5-8932-637607718705-anchor-menuTrigger"
           }
-        ]
+        ],
+        "inputParams": [
+          {
+            "label": "Menu Name",
+            "name": "menuName",
+            "type": "string",
+            "placeholder": "Name of the Menu",
+            "id": "menu_80aca9e9-9261-45d5-8932-637607718705-input-menuName-string"
+          },
+          {
+            "label": "Menu Header",
+            "name": "menuHeader",
+            "type": "string",
+            "placeholder": "Menu Header",
+            "rows": 3,
+            "id": "menu_80aca9e9-9261-45d5-8932-637607718705-input-menuHeader-string"
+          },
+          {
+            "label": "Menu Footer",
+            "name": "menuFooter",
+            "type": "string",
+            "placeholder": "Menu Footer",
+            "optional": true,
+            "rows": 3,
+            "id": "menu_80aca9e9-9261-45d5-8932-637607718705-input-menuFooter-string"
+          }
+        ],
+        "menuItems": [
+          {
+            "label": "Menu Item 0",
+            "name": "item0",
+            "type": "string",
+            "placeholder": "Menu Item 0",
+            "id": "menu_80aca9e9-9261-45d5-8932-637607718705-input-item_0-string"
+          },
+          {
+            "label": "Menu Item 1",
+            "name": "item1",
+            "type": "string",
+            "placeholder": "Menu Item 1",
+            "id": "menu_80aca9e9-9261-45d5-8932-637607718705-input-item_1-string"
+          },
+          {
+            "label": "Menu Item 2",
+            "name": "item2",
+            "type": "string",
+            "placeholder": "Menu Item 2",
+            "id": "menu_${id}-input-item_2-string"
+          },
+          {
+            "label": "Menu Item 3",
+            "name": "item3",
+            "type": "string",
+            "placeholder": "Menu Item 3",
+            "id": "menu_80aca9e9-9261-45d5-8932-637607718705-input-item_3-string"
+          },
+          {
+            "label": "Menu Item 4",
+            "name": "item4",
+            "type": "string",
+            "placeholder": "Menu Item 4",
+            "id": "menu_80aca9e9-9261-45d5-8932-637607718705-input-item_4-string"
+          }
+        ],
+        "outputs": {},
+        "outputAnchors": [],
+        "selected": true
       },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 263.38582756641813,
+        "y": 114.76259284785442
+      },
+      "dragging": false
+    },
+    {
+      "width": 300,
+      "height": 1162,
+      "id": "menu_aad53552-818e-4721-9092-95be7803082d",
       "position": {
-        "x": -0.8857846275474515,
-        "y": 121.04811333956027
+        "x": 925.663605344196,
+        "y": 121.9848150700767
       },
       "type": "customOld",
-      "className": "Flow_customNode__LJxOT",
+      "data": {
+        "id": "menu_aad53552-818e-4721-9092-95be7803082d",
+        "label": "Untitled Menu",
+        "type": "Menu",
+        "category": "Menu",
+        "description": "Untitled Menu",
+        "inputs": {
+          "systemMessagePrompt": "",
+          "humanMessagePrompt": "",
+          "promptValues": "",
+          "menuName": "Loan Information Menu",
+          "menuHeader": "Following loans are provided by ABC bank.",
+          "item0": "Personal Loans",
+          "item1": "Property Loans",
+          "item2": "Vehicle Loans"
+        },
+        "inputAnchors": [
+          {
+            "label": "Menu Trigger",
+            "name": "menuTrigger",
+            "type": "MenuTrigger",
+            "optional": true,
+            "id": "menu_aad53552-818e-4721-9092-95be7803082d-anchor-menuTrigger"
+          }
+        ],
+        "inputParams": [
+          {
+            "label": "Menu Name",
+            "name": "menuName",
+            "type": "string",
+            "placeholder": "Name of the Menu",
+            "id": "menu_aad53552-818e-4721-9092-95be7803082d-input-menuName-string"
+          },
+          {
+            "label": "Menu Header",
+            "name": "menuHeader",
+            "type": "string",
+            "placeholder": "Menu Header",
+            "rows": 3,
+            "id": "menu_aad53552-818e-4721-9092-95be7803082d-input-menuHeader-string"
+          },
+          {
+            "label": "Menu Footer",
+            "name": "menuFooter",
+            "type": "string",
+            "placeholder": "Menu Footer",
+            "optional": true,
+            "rows": 3,
+            "id": "menu_aad53552-818e-4721-9092-95be7803082d-input-menuFooter-string"
+          }
+        ],
+        "menuItems": [
+          {
+            "label": "Menu Item 0",
+            "name": "item0",
+            "type": "string",
+            "placeholder": "Menu Item 0",
+            "id": "menu_aad53552-818e-4721-9092-95be7803082d-input-item_0-string"
+          },
+          {
+            "label": "Menu Item 1",
+            "name": "item1",
+            "type": "string",
+            "placeholder": "Menu Item 1",
+            "id": "menu_aad53552-818e-4721-9092-95be7803082d-input-item_1-string"
+          },
+          {
+            "label": "Menu Item 2",
+            "name": "item2",
+            "type": "string",
+            "placeholder": "Menu Item 2",
+            "id": "menu_${id}-input-item_2-string"
+          },
+          {
+            "label": "Menu Item 3",
+            "name": "item3",
+            "type": "string",
+            "placeholder": "Menu Item 3",
+            "id": "menu_aad53552-818e-4721-9092-95be7803082d-input-item_3-string"
+          },
+          {
+            "label": "Menu Item 4",
+            "name": "item4",
+            "type": "string",
+            "placeholder": "Menu Item 4",
+            "id": "menu_aad53552-818e-4721-9092-95be7803082d-input-item_4-string"
+          }
+        ],
+        "outputs": {},
+        "outputAnchors": [],
+        "selected": true
+      },
       "selected": true,
       "positionAbsolute": {
-        "x": -0.8857846275474515,
-        "y": 121.04811333956027
+        "x": 925.663605344196,
+        "y": 121.9848150700767
       },
       "dragging": false
     }
@@ -97,19 +330,31 @@
     {
       "animated": true,
       "type": "buttonedge",
-      "source": "node_1",
-      "sourceHandle": "node_1-source-textSplitter-TextSplitter",
-      "target": "node_6",
-      "targetHandle": "node_6-target-textSplitter-TextSplitter",
-      "id": "node_1-node_1-source-textSplitter-TextSplitter-node_6-node_6-target-textSplitter-TextSplitter",
+      "source": "menu_0",
+      "sourceHandle": "menu_0-input-item_0-string",
+      "target": "menu_80aca9e9-9261-45d5-8932-637607718705",
+      "targetHandle": "menu_80aca9e9-9261-45d5-8932-637607718705-anchor-menuTrigger",
+      "id": "menu_0-menu_0-input-item_0-string-menu_80aca9e9-9261-45d5-8932-637607718705-menu_80aca9e9-9261-45d5-8932-637607718705-anchor-menuTrigger",
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "animated": true,
+      "type": "buttonedge",
+      "source": "menu_0",
+      "sourceHandle": "menu_0-input-item_1-string",
+      "target": "menu_aad53552-818e-4721-9092-95be7803082d",
+      "targetHandle": "menu_aad53552-818e-4721-9092-95be7803082d-anchor-menuTrigger",
+      "id": "menu_0-menu_0-input-item_1-string-menu_aad53552-818e-4721-9092-95be7803082d-menu_aad53552-818e-4721-9092-95be7803082d-anchor-menuTrigger",
       "data": {
         "label": ""
       }
     }
   ],
   "viewport": {
-    "x": 403.94577384359434,
-    "y": -83.9946337746803,
-    "zoom": 1.3777956975124246
+    "x": 702.9422041521789,
+    "y": -90.16906685045512,
+    "zoom": 0.72
   }
 }

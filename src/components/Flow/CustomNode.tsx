@@ -31,7 +31,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 const CustomNode: FC<NodeProps> = ({data, xPos, yPos, id}) => {
     const ref = useRef(null)
-    const {reactFlowInstance} = useContext(flowContext)
+    const { deleteNode, duplicateNode } = useContext(flowContext)
     const updateNodeInternals = useUpdateNodeInternals()
     const [position, setPosition] = useState(0)
     const theme = useTheme()
@@ -72,7 +72,7 @@ const CustomNode: FC<NodeProps> = ({data, xPos, yPos, id}) => {
                             >
                                 <img
                                     style={{ width: '100%', height: '100%', padding: 5, objectFit: 'contain' }}
-                                    src={`/node-icon/openai.png`}
+                                    src={`/node-icon/menu-1.png`}
                                     alt='Notification'
                                 />
                             </div>
@@ -91,7 +91,7 @@ const CustomNode: FC<NodeProps> = ({data, xPos, yPos, id}) => {
                         <IconButton
                             title='Duplicate'
                             onClick={() => {
-                                // duplicateNode(data.id)
+                                duplicateNode(data.id)
                             }}
                             sx={{ height: 35, width: 35, '&:hover': { color: theme?.palette.primary.main } }}
                             color={theme?.customization?.isDarkMode ? theme.colors?.paper : 'inherit'}
@@ -101,7 +101,7 @@ const CustomNode: FC<NodeProps> = ({data, xPos, yPos, id}) => {
                         <IconButton
                             title='Delete'
                             onClick={() => {
-                                // deleteNode(data.id)
+                                deleteNode(data.id)
                             }}
                             sx={{ height: 35, width: 35, mr: 1, '&:hover': { color: 'red' } }}
                             color={theme?.customization?.isDarkMode ? theme.colors?.paper : 'inherit'}

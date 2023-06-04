@@ -1,0 +1,68 @@
+[
+  {
+    "width": 300,
+    "height": 711,
+    "id": "menu_0",
+    "position": {
+      "x": 100.774716455307,
+      "y": 100.15148173674334
+    },
+    "type": "customOld",
+    "data": {
+      "id": "menu_0",
+      "label": "Welcome Menu",
+      "name": "welcomeMenu",
+      "type": "Menu",
+      "category": "Menu",
+      "description": "Welcome menu for the bot.",
+      "inputs": {
+        "systemMessagePrompt": "",
+        "humanMessagePrompt": "",
+        "promptValues": ""
+      },
+      "inputAnchors": [],
+      "inputParams": [],
+      "menuItems": [
+        {
+          "label": "Menu Item 0",
+          "name": "item0",
+          "type": "string",
+          "placeholder": "Menu Item 0",
+          "id": "menu_0-input-item_0-string"
+        },
+        {
+          "label": "Menu Item 1",
+          "name": "item1",
+          "type": "string",
+          "placeholder": "Menu Item 1",
+          "id": "menu_0-input-item_1-string"
+        },
+        {
+          "label": "Menu Item 2",
+          "name": "item2",
+          "type": "string",
+          "placeholder": "Menu Item 2",
+          "id": "menu_0-input-item_2-string"
+        },
+        {
+          "label": "Menu Item 3",
+          "name": "item3",
+          "type": "string",
+          "placeholder": "Menu Item 3",
+          "id": "menu_0-input-item_3-string"
+        },
+        {
+          "label": "Menu Item 4",
+          "name": "item4",
+          "type": "string",
+          "placeholder": "Menu Item 4",
+          "id": "menu_0-input-item_4-string"
+        }
+      ],
+      "outputs": {},
+      "outputAnchors": [
+      ],
+      "selected": true
+    }
+  }
+]
