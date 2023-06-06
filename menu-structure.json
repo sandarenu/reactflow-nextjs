@@ -1,68 +1,185 @@
-[
-  {
-    "width": 300,
-    "height": 711,
-    "id": "menu_0",
-    "position": {
-      "x": 100.774716455307,
-      "y": 100.15148173674334
-    },
-    "type": "customOld",
-    "data": {
-      "id": "menu_0",
-      "label": "Welcome Menu",
-      "name": "welcomeMenu",
+{
+  "menus": [
+    {
+      "name": "Language Selection",
+      "id": "210000",
       "type": "Menu",
-      "category": "Menu",
-      "description": "Welcome menu for the bot.",
-      "inputs": {
-        "systemMessagePrompt": "",
-        "humanMessagePrompt": "",
-        "promptValues": ""
-      },
-      "inputAnchors": [],
-      "inputParams": [],
-      "menuItems": [
+      "header": [
         {
-          "label": "Menu Item 0",
-          "name": "item0",
-          "type": "string",
-          "placeholder": "Menu Item 0",
-          "id": "menu_0-input-item_0-string"
-        },
-        {
-          "label": "Menu Item 1",
-          "name": "item1",
-          "type": "string",
-          "placeholder": "Menu Item 1",
-          "id": "menu_0-input-item_1-string"
-        },
-        {
-          "label": "Menu Item 2",
-          "name": "item2",
-          "type": "string",
-          "placeholder": "Menu Item 2",
-          "id": "menu_0-input-item_2-string"
-        },
-        {
-          "label": "Menu Item 3",
-          "name": "item3",
-          "type": "string",
-          "placeholder": "Menu Item 3",
-          "id": "menu_0-input-item_3-string"
-        },
-        {
-          "label": "Menu Item 4",
-          "name": "item4",
-          "type": "string",
-          "placeholder": "Menu Item 4",
-          "id": "menu_0-input-item_4-string"
+          "lang": "en",
+          "text": "Please select the language you prefer to continue.\nකරුණාකර ඔබ ඉදිරියට යාමට කැමති භාෂාව තෝරන්න.\nநீங்கள் தொடர விரும்பும் மொழியைத் தேர்ந்தெடுக்கவும்"
         }
       ],
-      "outputs": {},
-      "outputAnchors": [
+      "footer": [],
+      "menuItems": [
+        {
+          "id": "210000_item_0",
+          "type": "MenuItem",
+          "content": [
+            {
+              "lang": "en",
+              "text": "English"
+            }
+          ]
+        },
+        {
+          "id": "210000_item_1",
+          "type": "MenuItem",
+          "content": [
+            {
+              "lang": "en",
+              "text": "සිංහල"
+            }
+          ]
+        },
+        {
+          "id": "210000_item_2",
+          "type": "MenuItem",
+          "content": [
+            {
+              "lang": "en",
+              "text": "தமிழ்"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Service Selection",
+      "id": "210001",
+      "type": "Menu",
+      "header": [
+        {
+          "lang": "en",
+          "text": "Welcome to ABC Bank.\nSelect the service you want to perform."
+        },
+        {
+          "lang": "si",
+          "text": "ආයුබෝවන් ABC බැංකුවට.\nඔබට අවශ්‍ය සේවාව තෝරන්න."
+        },
+        {
+          "lang": "ta",
+          "text": "ABC வங்கிக்கு வரவேற்கிறோம்.\nநீங்கள் செய்ய விரும்பும் சேவையைத் தேர்ந்தெடுக்கவும்."
+        }
       ],
-      "selected": true
+      "footer": [],
+      "menuItems": [
+        {
+          "id": "210001_item_0",
+          "type": "MenuItem",
+          "content": [
+            {
+              "lang": "en",
+              "text": "Account Balance"
+            },
+            {
+              "lang": "si",
+              "text": "ගිණුම් ශේෂය"
+            },
+            {
+              "lang": "ta",
+              "text": "கணக்கு நிலை"
+            }
+          ]
+        },
+        {
+          "id": "210001_item_1",
+          "type": "MenuItem",
+          "content": [
+            {
+              "lang": "en",
+              "text": "Account Inquery"
+            },
+            {
+              "lang": "si",
+              "text": "ගිණුම් විමසුම"
+            },
+            {
+              "lang": "ta",
+              "text": "கணக்கு விசாரணை"
+            }
+          ]
+        },
+        {
+          "id": "210001_item_2",
+          "type": "MenuItem",
+          "content": [
+            {
+              "lang": "en",
+              "text": "Loan Inquery"
+            },
+            {
+              "lang": "si",
+              "text": "ණය විමසුම"
+            },
+            {
+              "lang": "ta",
+              "text": "கடன் விசாரணை"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Set English as Language",
+      "id": "210002",
+      "type": "ConfigSet",
+      "configValues": [
+        {
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "name": "Set Sinhala as Language",
+      "id": "210003",
+      "type": "ConfigSet",
+      "configValues": [
+        {
+          "language": "si"
+        }
+      ]
+    },
+    {
+      "name": "Set Tamil as Language",
+      "id": "210004",
+      "type": "ConfigSet",
+      "configValues": [
+        {
+          "language": "tl"
+        }
+      ]
     }
-  }
-]
+  ],
+  "initialMenu": "210000",
+  "connections": [
+    {
+      "source": "menu_0",
+      "sourceHandle": "210000_item_0",
+      "target": "210002",
+      "targetHandle": "210002_receiver_0",
+      "id": "menu_0-210000_item_0-210002_receiver_0"
+    },
+    {
+      "source": "menu_0",
+      "sourceHandle": "210000_item_1",
+      "target": "210003",
+      "targetHandle": "210003_receiver_0",
+      "id": "menu_0-210000_item_1-210003-210003_receiver_0"
+    },
+    {
+      "source": "menu_0",
+      "sourceHandle": "210000_item_2",
+      "target": "210004",
+      "targetHandle": "210004_receiver_0",
+      "id": "menu_0-210000_item_2-210004-210004_receiver_0"
+    },
+    {
+      "source": "210002",
+      "sourceHandle": "210002_trigger_0",
+      "target": "210001",
+      "targetHandle": "210001_receiver_0",
+      "id": "210002-210002_trigger_0-210001-210001_receiver_0"
+    }
+  ]
+}
